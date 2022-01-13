@@ -1,0 +1,31 @@
+version: "3"
+
+services:
+  db:
+    build: .docker/postgres
+    container_name: dsmovie-db
+    restart: always
+    tty: true
+    volumes:
+      - ./.docker/dbdata:/var/lib/postgresql/data
+      # - ./.docker/postgres:/docker-entrypoint-initdb.d
+    ports: 
+      - 5432:5432
+    environment: 
+      - POSTGRES_PASSWORD=1234567
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=dsmovie
+    extra_hosts:
+      - "host.docker.internal:172.17.0.1"
+    
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: dsmovie-pgadmin
+    tty: true
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@user.com
+      - PGADMIN_DEFAULT_PASSWORD=admin
+    ports:
+      - 9000:80
+    extra_hosts:
+    - "host.docker.internal:172.17.0.1"

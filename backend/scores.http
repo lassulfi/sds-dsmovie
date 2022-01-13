@@ -2,7 +2,7 @@ PUT http://localhost:8080/scores
 Content-Type: application/json
 
 {
-    "movieId": 1,
-    "email": "rodrigo@gmail.com",
-    "score": 5
+    "movieId": 3,
+    "email": "ana@gmail.com",
+    "score": 4
 }
