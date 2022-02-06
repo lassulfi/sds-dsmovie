@@ -61,9 +61,9 @@ yarn start
 ## TODOS
 
 - Containers
-    - [] Criar container para o ambiente de desenvolvimento da aplicação backend
+    - [X] Criar container para o ambiente de desenvolvimento da aplicação backend
     - [] Criar container para o ambiente de produção da aplicação backend
-    - [] Criar container para o ambiente de desenvolvimento da aplicação frontend
+    - [X] Criar container para o ambiente de desenvolvimento da aplicação frontend
     - [] Criar container para o ambiente de produção da aplicação frontend
 
 - Backend
