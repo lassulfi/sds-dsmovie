@@ -1,6 +1,15 @@
 version: "3"
 
 services:
+  frontend:
+    build: frontend
+    entrypoint: ./.docker/entrypoint.sh
+    container_name: dsmovie-frontend
+    volumes:
+      - ./frontend:/home/node/app
+    ports:
+      - 3000:3000
+
   db:
     build: .docker/postgres
     container_name: dsmovie-db
