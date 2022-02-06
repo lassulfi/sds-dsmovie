@@ -10,6 +10,20 @@ services:
     ports:
       - 3000:3000
 
+  backend:
+    build: backend
+    entrypoint: ./.docker/entrypoint.sh
+    container_name: dsmovie-backend
+    volumes: 
+      - ./backend:/app
+    working_dir: /app
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+    extra_hosts:
+      - "host.docker.internal:172.17.0.1"
+
   db:
     build: .docker/postgres
     container_name: dsmovie-db
