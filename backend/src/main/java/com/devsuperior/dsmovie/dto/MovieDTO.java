@@ -2,11 +2,23 @@ package com.devsuperior.dsmovie.dto;
 
 import com.devsuperior.dsmovie.entities.Movie;
 
+import io.swagger.annotations.ApiModelProperty;
+
 public class MovieDTO {
+
+    @ApiModelProperty(value = "Movie ID", example = "99")
     private Long id;
+
+    @ApiModelProperty(value = "Movie title", example = "TRON")
     private String title;
+
+    @ApiModelProperty(value = "Movie score", example = "4.0")
     private Double score;
+
+    @ApiModelProperty(value = "Number of evaluations", example = "200")
     private Integer count;
+
+    @ApiModelProperty(value = "Movie thumb image url", example = "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wlHzvzXE9AvMgrVsKHg2PweC3aC.jpg")
     private String image;
 
     public MovieDTO() {
