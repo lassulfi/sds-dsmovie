@@ -1,9 +1,16 @@
 package com.devsuperior.dsmovie.dto;
 
+import io.swagger.annotations.ApiModelProperty;
+
 public class ScoreDTO {
 
+    @ApiModelProperty(name = "Movie Id", example = "99")
     private Long movieId;
+
+    @ApiModelProperty(name = "User email", example = "user@email.com")
     private String email;
+
+    @ApiModelProperty(value = "Movie score", example = "4.0")
     private Double score;
 
     public ScoreDTO() {

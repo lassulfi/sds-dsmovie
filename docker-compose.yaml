@@ -14,6 +14,7 @@ services:
     build: backend
     entrypoint: ./.docker/entrypoint.sh
     container_name: dsmovie-backend
+    restart: always
     volumes: 
       - ./backend:/app
     working_dir: /app

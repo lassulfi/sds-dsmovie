@@ -68,7 +68,7 @@ yarn start
 
 - Backend
     - [] Implementar testes no backend para a arquitetura em camadas
-    - [] Implementar Swagger2
+    - [X] Implementar Swagger2 (atualizar conforme a evolução do projeto)
     - [] Alterar a arquitetura do backend para arquitetura Ports & Adapters (hexagonal)
     - [] Implementar os testes para o novo padrão arquitetural
     - [] Implementar segurança
